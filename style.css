@@ -1,0 +1,29 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav{
+    /* Utilizamos el display flex para poder tener espacio entre los elementos del navbar
+    de esta forma, podemos poner espacio entre los elementos de la lista que estamos mostrando
+    como navbar */
+    display: flex;
+    justify-content: space-around;
+    /* Este width lo estamos poniendo para que quede ese espacio entre elementos */
+    width: 30%;
+}
+/* Vamos a quitar el formato del navbar para que se quiten esos puntos */
+.nav li {
+    list-style: none;
+    margin: 0;
+}
+
+/* Vamonos con el lio del Burguer (el botón que tiene que aparecer cuando la pantalla
+es pequeña. Este botón tiene como función mostrar el menú (la lista) cuando se haga 
+click */
+/* Le vamos a poner un tamaño y display none. Porque por defecto no se va a ver*/
+.burger {
+    font-size: 1.2em;
+    display: none;
+}
