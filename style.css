@@ -1,7 +1,11 @@
 header {
     width: 100%;
+    height: 70px;
     display: flex;
+    align-items: center;
     justify-content: space-around;
+    background: #232323;
+    color: #ccc;
 }
 
 .nav{
@@ -26,4 +30,44 @@ click */
 .burger {
     font-size: 1.2em;
     display: none;
+}
+
+/*---------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 678px) {
+    /* Vamos a mostrar el burguer porque ya necesitamos ese elemento */
+    .burger{
+        display: block;
+    }
+    /* En el momento que se hace display del burguer el resto de los elemento del
+    navbar no son necesario porque serán mostrados cuando se haga click */
+
+    /* ¿Que tenemos que hacer con la barra entonces? */
+
+    /* Tenemos que "actualizar" ese formato para poder mostrarlo adecuadamente
+        cuando se haga clicl dentro del responsive */
+    
+    .nav {
+        margin: 0;
+        /* Le vamos a poner un color y lo vamos a alinear en la parte derecha */
+        background: #343434; 
+        position: absolute;
+        right: -100%;
+        top: 70px;
+        /* Lo vamos a poner a mitad de la pantalla y separado del top de la
+        pantalla */
+        width: 50%;
+        height: calc(100% - 70px);
+        /* Vamos a  poner distancia entre los elementos */
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0;
+    }
+    /* Los elementos dentro del navbar que esten centrados */
+    .navlink {
+        text-align: center;
+    }
+    .nav-active {
+        right: 0;
+    }
 }
